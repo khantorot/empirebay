@@ -1,0 +1,301 @@
+header{
+  height: calc(100vh - 70px);
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 0;
+}
+
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slick-list,
+.slick-track {
+  width: 100%;
+  height: 100%;
+}
+
+.slider__item {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 70px);
+  outline: none;
+  padding: 10px;
+}
+
+
+
+
+
+
+
+.textBlock{
+  width: 340px;
+  height: 100%;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.textBlock h2{
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 54px;
+}
+
+.textBlock p{
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+
+.textBlock a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  width: 170px;
+  height: 50px;
+}
+
+.imgBlock{
+  position: absolute;
+  left: 350px;
+  width: calc(100% - 360px);
+  height: calc(100vh - 70px);
+  overflow: hidden;
+}
+
+.imgBlock img{
+  width: 100%;
+}
+
+
+
+
+
+
+
+.rooms{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;  
+    padding: 10px;
+}
+
+.room{
+  position: relative;
+  overflow: hidden;
+  grid-column-start: span 1;
+  grid-row-start: span 1;
+}
+
+
+
+.rooms .room:nth-child(2n + 1){
+  grid-column-start: span 2;
+  grid-row-start: span 1;
+}
+
+.rooms .room:nth-child(4n + 1){
+  grid-column-start: span 1;
+  grid-row-start: span 2;
+}
+  
+.rooms .room:nth-child(4n + 1) .roomImg{
+  height: calc(30vw + 140px);
+}
+
+.rooms .room:nth-child(4n + 5) .roomImg{
+  height: calc(30vw + 160px);
+}
+
+.rooms .room:nth-child(4n + 1) .roomImg img{
+  height: 100%;
+  width: auto;
+}
+
+.room .roomImg{
+  height: 15vw;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.room .roomImg img{
+  width: 100%;
+  min-height: 100%;
+}
+
+.room .roomText{
+  margin-top: 10px;
+}
+
+.room .roomText .roomTitle{
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.room .roomText .roomTitle:hover{
+  text-decoration: underline;
+}
+
+.room .roomText p{
+  font-size: 14px;
+  max-width: 300px;
+  margin-top: 4px;
+}
+
+.room .roomText .room_link{
+  margin-top: 10px;
+}
+
+
+
+
+
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 10px;
+}
+
+.gallery_item{
+	width: calc(50% - 5px);
+	position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.gallery_item .img_box{
+	overflow: hidden;
+  width: calc(100% - 260px);
+}
+
+
+.gallery_item .img_box img{
+	width: 100%;
+}
+
+
+.gallery_item .text_box{
+  width: 250px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.gallery_item .text_box h4{
+  font-size: 22px;
+  font-weight: 500;
+}
+
+
+.gallery_item .text_box p{
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.gallery_item .text_box a{
+  margin-top: 10px;
+}
+
+
+
+@media screen and (max-width: 1100px){
+
+  header{
+    height: auto;
+  }
+
+  .slider__item{
+    height: auto;
+  }
+
+  .textBlock{
+    width: 100%;
+    height: auto;
+    min-height: 260px;
+    margin: 10px 0;
+  }
+  
+  .textBlock h2{
+    font-size: 40px;
+  }
+
+  
+  .textBlock p{
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .imgBlock{
+    position: static;
+    width: 100%;
+    height: auto;
+    max-height: 50vw;
+  }
+  
+  
+
+  .rooms{
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;  
+  }
+
+  .room{
+    margin-bottom: 20px;
+  }
+
+  .room .roomImg{
+    height: auto;
+  }
+
+  .rooms .room:nth-child(2n + 1){
+    grid-column-start: span 1;
+    grid-row-start: span 1;
+  }
+
+  .rooms .room:nth-child(4n + 1){
+    grid-column-start: span 1;
+    grid-row-start: span 1;
+  }
+    
+  .rooms .room:nth-child(4n + 1) .roomImg{
+    height: auto;
+  }
+
+  .rooms .room:nth-child(4n + 1) .roomImg img{
+    width: 100%;
+  }
+  
+
+
+	.gallery_item{
+		width: 100%;
+		margin-bottom: 30px;
+	}
+  .gallery_item .img_box{
+    width: 100%;
+    margin-top: 10px;
+  }
+}
