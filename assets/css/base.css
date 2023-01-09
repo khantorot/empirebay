@@ -1,0 +1,642 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;900&display=swap');
+
+:root{
+    --text: #000;
+    --text1: #2c2c2c;
+    --bg: #fff;
+    --gray: #aaaaaa;
+}
+
+body{
+    overflow-x: hidden;
+    background: var(--bg);
+    color: var(--text);
+}
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+a{
+    color: var(--text);
+    text-decoration: none;
+}
+
+textarea, button, input{
+    border: 0;
+    outline: 0;
+    color: var(--text);
+    border: 1px solid var(--text);
+}
+
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: rgba(0, 0, 0, 0.0);
+}
+
+
+.body_scroll{
+    overflow: hidden;
+}
+
+
+
+
+.preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 100;
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity ease-out 0.5s, visibility ease-out 0.5s;
+}
+
+
+.preloader p{
+    position: relative;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 0px 10px;
+    border-left: 1px solid var(--text);
+    border-right: 1px solid var(--text);
+}
+
+.preloader p::after,
+.preloader p::before{
+    content: '';
+    position: absolute;
+    width: calc(50vw - 75px);
+    height: 1px;
+    background: var(--text);
+}
+
+.preloader p::after{
+    top: 50%;
+    left: calc(100% + 10px);
+}
+
+.preloader p::before{
+    top: 50%;
+    right: calc(100% + 10px);
+}
+
+
+.preloader_hide{
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+
+.btn_link,
+.btn{
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    text-align: center;
+    text-transform: lowercase;
+    cursor: pointer;
+    border: 1px solid var(--text);
+}
+
+
+.btn_link:after,
+.btn_link:before,
+.btn:after,
+.btn:before{
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 1px;
+  background: var(--text);
+  transition: transform ease 0.3s;
+  left: 0;
+  top: 50%;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.btn_link:before,
+.btn:before{
+  left: auto;
+  right: 0;
+  transform-origin: right;
+}
+
+.btn_link:hover:after,
+.btn_link:hover:before{
+    transform: scaleX(0.5);
+}
+.btn:hover:after,
+.btn:hover:before{
+    transform: scaleX(1);
+}
+
+.btn_link{
+    border: 0;
+}
+
+.btn_link:after,
+.btn_link:before{
+    transform: scaleX(1);
+}
+
+
+
+
+
+
+.toBook{
+	padding: 10px;
+    width: 100%;
+    height: 70px;
+    background: var(--bg);
+    position: sticky;
+	top: 0;
+    left: 0;
+    z-index: 9;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main{
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.hide_page{
+    transform: translateX(350px);
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 100%;
+    background: var(--bg);
+    border-right: 1px solid var(--text);
+    z-index: 10;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    transition: 0.3s;
+    transform: translateX(-100%);
+}
+
+.menu_show{
+    transform: translateX(0);
+}
+
+.menu_list{
+    list-style: none;
+    margin-top: auto;
+    width: 100%;
+}
+
+.menu_list li a{
+    width: 100%;
+    font-size: 22px;
+    border-bottom: 0;
+}
+
+.menu_list li:last-child a{
+    border-bottom: 1px solid var(--text);
+}
+
+.menu_contact{
+    list-style: none;
+}
+
+.menu_contact li{
+    line-height: 34px;
+}
+
+.menu_contact a{
+    position: relative;
+    font-size: 18px;
+}
+
+.menu_contact a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+.menu_close_btn{
+    width: 100%;
+    margin-bottom: auto;
+    height: 50px;
+    border: 1px solid var(--text);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu_close_btn span{
+    position: relative;
+    width: 40px;
+    height: 1px;
+    background: transparent;
+}
+
+.menu_close_btn span::after,
+.menu_close_btn span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--text);
+    transform: rotate(45deg);
+}
+
+.menu_close_btn span::after{
+    transform: rotate(-45deg);
+}
+
+
+
+
+.menu_btn{
+    height: 50px;
+    width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.ui-datepicker{
+	border-color: var(--bg)!important;
+	border-radius: 0!important;
+    background: var(--bg);
+}
+
+.ui-icon{
+	cursor: pointer;
+	border-radius: 0;
+	background: transparent;
+    border: 1px solid var(--text);
+}
+
+.ui-datepicker-next,
+.ui-datepicker-prev{
+  background: none!important;
+  border: none!important;
+}
+
+
+.ui-datepicker-next:hover,
+.ui-datepicker-prev:hover{
+  margin: 1px;
+}
+
+.ui-datepicker-header{
+	background: var(--bg)!important;
+	color: var(--text)!important;
+    border: 1px solid var(--gray);
+    border-radius: 0;
+}
+
+ 
+.toBookBtn{
+    height: 50px;
+    width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.child,
+.adult{
+    position: relative;
+    display: inherit;
+    align-items: center;
+}
+
+.checkIn{
+	padding-left: 40px;
+}
+  
+.checkIn,
+.checkOut{
+    position: relative;
+    height: 100%;
+    display: inherit;
+    align-items: center;
+    cursor: pointer;
+}
+
+  
+  
+.adultCount,
+.childCount{
+    font-size: 22px;
+    color: var(--text);
+    text-align: center;
+    width: 30px;
+    pointer-events: none;
+	border: 0;
+	border-left: 1px solid var(--gray);
+	border-right: 1px solid var(--gray);
+}
+
+.checkIn p span,
+.checkOut p span{
+    font-size: 22px;
+    pointer-events: none;
+    margin-left: 10px;
+}
+  
+.checkIn p,
+.checkOut p,
+.child p,
+.adult p{
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+  
+.adult div,
+.child div{
+    position: relative;
+    height: 30px;
+    width: 30px;
+    font-size: 30px;
+    cursor: pointer;
+    display: inherit;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+  
+.arrow{
+    height: 25px;
+    margin-left: 5px;
+}
+  
+#depart,
+#return{
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    top: 0px;
+    background: none;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+
+section{
+	margin: 50px 0px;
+}
+
+.section_title{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 10px;
+}
+
+.back_btn{
+	width: 50px;
+	height: 50px;
+	margin-right: 5px;
+	border: 1px solid var(--text);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    transition: ease 0.3s;
+}
+
+
+.back_btn span{
+	height: 1px;
+	width: 20px;
+	position: relative;
+}
+
+.back_btn span::after,
+.back_btn span::before{
+	content: '';
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 1px;
+	transform: rotate(45deg);
+	background: var(--text);
+	transform-origin: left;
+}
+
+.back_btn span::before{
+    left: -1px;
+	transform: rotate(-45deg) translateY(1px);
+}
+
+.section_title h2{
+    position: relative;
+    line-height: 50px;
+	font-size: 50px;
+	font-weight: 200;
+}
+
+.section_title h2::after{
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: calc(50% - 1px);
+    margin-left: 10px;
+    width: calc(100vw - 100% - 210px);
+    height: 1px;
+    background: var(--text);
+}
+
+.title_links{
+	margin-left: auto;
+}
+
+.title_links a{
+    height: 50px;
+	min-width: 170px;
+    display: inline-flex;
+	align-items: center;
+	justify-content: center;	
+	margin-left: 10px;
+    border-color: var(--text);
+    transition: ease 0.3s;
+}
+
+
+.title_links a:after,
+.title_links a:before{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background: var(--text);
+  transition: all ease 0.3s;
+  left: 0;
+  top: calc(50% - 1px);
+}
+
+.title_links a:before{
+  left: auto;
+  right: 0;
+}
+.title_links a:hover:after,
+.title_links a:hover:before{
+  width: 20px;
+}
+
+.title_links a:hover{
+    border-color: var(--text);
+}
+
+
+
+
+
+footer{
+	padding: 150px 10px 50px 10px;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 1100px){
+
+    .hide_page{
+        transform: translateX(100%);
+    }
+    
+    .toBook{
+        padding: 10px;
+        width: 100%;
+        height: 390px;
+        position: relative;
+        display: block;
+    }
+
+    
+    .toBookBtn{
+        display: flex;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+
+    .checkIn{
+        padding-left: 0px;
+    }
+  
+    .checkIn,
+    .checkOut{
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        border-bottom: 1px solid var(--gray);
+    }
+    
+
+    .child,
+    .adult{
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid var(--gray);
+        margin-bottom: 10px;
+    }
+
+    .child{
+        border-bottom: 0;
+    }
+ 
+    .checkIn p,
+    .checkOut p,
+    .child p,
+    .adult p{
+        font-size: 14px;
+    }
+
+    .menu_btn{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .menu{
+        width: 100vw;
+        height: 100vh;
+    }
+
+
+
+        
+    .section_title{
+        justify-content: flex-start;
+        margin: 20px 0px;
+    }
+
+    .section_title h2::after{
+        display: none;
+    }
+
+    .back_btn{
+        width: 40px;
+        height: 40px;
+        margin-right: 5px;
+        margin-bottom: 10px;
+    }
+
+
+    .back_btn span{
+        height: 3px;
+        width: 15px;
+    }
+
+    .section_title h2{
+        font-size: 25px;
+        font-weight: 300;
+        margin-bottom: 10px;
+    }
+
+    .title_links{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .title_links a{
+        height: 45px;
+        min-width: calc(50% - 5px);
+        margin: 0;
+    }
+
+}

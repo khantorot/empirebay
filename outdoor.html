@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="./content/icons/shortcut.png">
+    <title>Галерея | Empirebay</title>
+	<link rel="stylesheet" href="./assets/css/base.css">
+	<link rel="stylesheet" href="./assets/css/in_out_door.css">
+	<link rel="stylesheet" href="./assets/css/jquery_ui.css">
+</head>
+
+<body>
+	<div class="preloader">
+        <p>empirebay</p>
+    </div>
+    <div class="menu">
+        <div class="menu_close_btn"><span></span></div>
+        <ul class="menu_contact">
+            <li><a href="https://www.google.com/maps" target="_blank">Арглтон 221Б, Лондон</a></li>  
+            <li><a href="tel:+4402021314562">+44 (020) 2131 4562</a></li> 
+            <li><a href="mailto:info@embay.com">info@embay.com</a></li>   
+        </ul>
+        <ul class="menu_list">
+            <li><a href="./index.html" class="btn">Главная</a></li>
+            <li><a href="./rooms.html" class="btn">Номера</a></li>
+            <li><a href="./booking.html" class="btn">Бронировать</a></li>
+            <li><a href="./contact.html" class="btn">Контакты</a></li>
+        </ul>
+    </div>
+	<main>
+        <div class="section_title gallery_title">
+            <a href="./rooms.html" class="back_btn"><span></span></a>
+            <h2 class="room_title">Магнолиа Хаус</h2>
+            <div class="title_links">
+                <a href="./indoor.html" class="btn">внутри</a>
+                <a href="./outdoor.html" class="btn">снаружи</a>
+            </div>
+        </div>
+        <div class="wrapper active">
+    
+            <div>
+                <div class="cloudimage-360" data-folder="./content/images/outdoor/"
+                    data-filename="{index}.jpg" data-amount="30" data-magnifier="3"
+                    data-ratio="0.5" data-stop-at-edges data-spin-reverse data-control-reverse>
+                </div>
+            </div>
+        </div>
+        <div class="data">
+            <p class="data_info">Отель Magnolia House at Destin Pointe III расположен в 200 м от пляжа Дестин.</p>
+            <p class="data_list">кухня, открытый бассейн, стиральная машина, бесплатная парковка</p>
+        </div>
+    
+        <div class="toBook">
+            <div class="menu_btn btn">меню</div>
+            <div class="checkIn">
+                <p>Въезд<span></span></p>
+                <img src="./content/icons/arrow.png" alt="arrow" class="arrow">
+                <input type="text" id="depart" autocomplete="off" readonly>
+            </div>
+            <div class="checkOut">
+                <p>Выезд<span></span></p>
+                <img src="./content/icons/arrow.png" alt="arrow" class="arrow">
+                <input type="text" id="return" autocomplete="off" readonly>
+            </div>
+            <div class="adult">
+                <p>Взрослых</p>
+                <div class="minusAdult">-</div>
+                <input type="text" class="adultCount" readonly>
+                <div class="plusAdult">+</div>
+            </div>
+            <div class="child">
+                <p>Детей</p>
+                <div class="minusChild">-</div>
+                <input type="text" class="childCount" readonly> 
+                <div class="plusChild">+</div>
+            </div>
+            <a href="./booking.html" class="toBookBtn btn">Бронировать</a>
+        </div>
+        
+        <footer>
+            <a href="./rooms.html" class="btn_link">номера</a>
+        </footer>
+    </main>
+
+	<script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/jquery_ui.js"></script>
+    <script src="./assets/js/data.js"></script>
+	<script src="./assets/js/script.js"></script>
+	<script src="./assets/js/360.js"></script>
+    <script src="./assets/js/in_out_door.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="./content/icons/shortcut.png">
+    <title>Главная | Empirebay</title>
+    <link rel="stylesheet" href="./assets/css/jquery_ui.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+
+<body>
+    <div class="preloader">
+        <p>empirebay</p>
+    </div>
+    <div class="menu">
+        <div class="menu_close_btn"><span></span></div>
+        <ul class="menu_contact">
+            <li><a href="https://www.google.com/maps" target="_blank">Арглтон 221Б, Лондон</a></li>  
+            <li><a href="tel:+4402021314562">+44 (020) 2131 4562</a></li> 
+            <li><a href="mailto:info@embay.com">info@embay.com</a></li>   
+        </ul>
+        <ul class="menu_list">
+            <li><a href="./index.html" class="btn">Главная</a></li>
+            <li><a href="./rooms.html" class="btn">Номера</a></li>
+            <li><a href="./booking.html" class="btn">Бронировать</a></li>
+            <li><a href="./contact.html" class="btn">Контакты</a></li>
+        </ul>
+    </div>
+    <main>
+        <header>
+            <div class="header_panel">
+                <div class="header_title"></div>
+                <div class="header_menu">
+                    <div class="prev_btn"><span></span></div>
+                    <div class="next_btn"><span></span></div>
+                </div>
+            </div>
+            <div class="header_content">
+                <div class="header_text"></div>
+                <div class="wrapper active">
+                    <div>
+                        <div class="cloudimage-360" data-folder="./content/images/outdoor/" data-filename="{index}.jpg"
+                            data-amount="30" data-magnifier="3" data-ratio="0.5" data-stop-at-edges
+                            data-spin-reverse data-control-reverse>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="toBook">
+            <div class="menu_btn btn">меню</div>
+            <div class="checkIn">
+                <p>Въезд<span></span></p>
+                <img src="./content/icons/arrow.png" alt="arrow" class="arrow">
+                <input type="text" id="depart" autocomplete="off" readonly>
+            </div>
+            <div class="checkOut">
+                <p>Выезд<span></span></p>
+                <img src="./content/icons/arrow.png" alt="arrow" class="arrow">
+                <input type="text" id="return" autocomplete="off" readonly>
+            </div>
+            <div class="adult">
+                <p>Взрослых</p>
+                <div class="minusAdult">-</div>
+                <input type="text" class="adultCount" readonly>
+                <div class="plusAdult">+</div>
+            </div>
+            <div class="child">
+                <p>Детей</p>
+                <div class="minusChild">-</div>
+                <input type="text" class="childCount" readonly>
+                <div class="plusChild">+</div>
+            </div>
+            <a href="./booking.html" class="toBookBtn btn">Бронировать</a>
+        </div>
+        <section>
+            <div class="section_title rooms_title">
+                <h2>Наши номера</h2>
+                <div class="title_links">
+                    <a href="./rooms.html" class="btn">Все номера</a>
+                </div>
+            </div>
+            <div class="rooms"></div>
+        </section>
+    
+        <footer>
+            <a href="./rooms.html" class="btn_link">Посмотреть еще</a>
+        </footer>
+    </main>
+
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/jquery_ui.js"></script>
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/360.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
